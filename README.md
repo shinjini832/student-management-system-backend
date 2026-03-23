@@ -73,6 +73,25 @@ Dynamic filtering using query parameters:
 GET /students/filter?year=3
 GET /students/filter?department=CSE&year=3``
 
+- Uses Spring Data JPA method naming
+- Supports multiple filter combinations
+
+---
+
+###  6. Pagination & Sorting
+Efficient data handling using Spring `Pageable`:
+``GET /students/paged?page=0&size=3
+GET /students/paged?page=0&size=3&sortBy=year``
+###  Pagination Features:
+- Reduces load on server
+- Improves performance
+- Returns metadata:
+  - totalElements
+  - totalPages
+  - currentPage
+  - pageSize
+
+
 ## 🔗 API Endpoints
 
 ###  Create Student
