@@ -1,6 +1,6 @@
 # 🎓 Student Management System (Spring Boot Backend API)
 
-## 🚀 Overview
+##  Overview
 This project is a RESTful backend application built using Spring Boot to manage student records. It provides complete CRUD functionality along with advanced backend features like validation, global exception handling, filtering, and pagination. The application follows a layered architecture and uses DTOs to ensure clean separation between API and database models.
 
 ---
@@ -21,7 +21,7 @@ The project follows a clean layered architecture:
 Controller → Service → Repository → Database
 
 
-### 📌 Layers Explained
+###  Layers Explained
 - **Controller:** Handles HTTP requests and responses  
 - **Service:** Contains business logic  
 - **Repository:** Handles database interaction using JPA  
@@ -29,7 +29,7 @@ Controller → Service → Repository → Database
 
 ---
 
-## 📌 Features Implemented
+##  Features Implemented
 
 ###  1. CRUD Operations
 - Create student
@@ -75,24 +75,24 @@ GET /students/filter?department=CSE&year=3``
 
 ## 🔗 API Endpoints
 
-### 🔹 Create Student
+###  Create Student
 ``POST /students``
 
-### 🔹 Get All Students
+###  Get All Students
 ``GET /students``
 
-### 🔹 Get Student by ID
+###  Get Student by ID
 ``GET /students/{id}``
 
-### 🔹 Update Student
+###  Update Student
 ``PUT /students/{id}``
 
-### 🔹 Delete Student
+###  Delete Student
 ``DELETE /students/{id}``
 
-### 🔹 Filter Students
+###  Filter Students
 ``GET /students/filter?department=CSE&year=3``
-## 🧪 How to Run the Project
+##  How to Run the Project
 
 ### 1. Clone the Repository
 ```bash
