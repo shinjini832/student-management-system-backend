@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container"></div>
+    <h1>Student Management System</h1>
+<div class="card"></div>
+    <!-- Add Student Form -->
+    <h2>Add Student</h2>
+    <form id="studentForm">
+        <input type="text" id="name" placeholder="Name" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="text" id="department" placeholder="Department" required>
+        <input type="number" id="year" placeholder="Year" required>
+        <input type="number" id="cgpa" placeholder="CGPA" step="0.1" required>
+        <button type="submit">Add Student</button>
+        <button type="button" onclick="loadStudentsPaged()">Refresh</button>
+    </form>
+     </div>
+
+    <hr>
+
+    <!-- Student List -->
+    <h2>All Students</h2>
+   <button onclick="loadStudentsPaged()">Load Students</button>
+
+   <div class="card"></div>
+    <h2>Filter Students</h2>
+
+<input type="text" id="filterDepartment" placeholder="Department">
+<input type="number" id="filterYear" placeholder="Year">
+<button onclick="filterStudents()">Filter</button>
+<button onclick="loadStudents()">Reset</button>
+ </div>
+ <div class="card"></div>
+    <table border="1" id="studentTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Department</th>
+                <th>Year</th>
+                <th>CGPA</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <div id="paginationControls">
+    <button onclick="prevPage()">Previous</button>
+    <span id="pageInfo">Page 1</span>
+    <button onclick="nextPage()">Next</button>
+</div>
+</div>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>

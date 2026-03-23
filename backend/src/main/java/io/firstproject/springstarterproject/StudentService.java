@@ -88,4 +88,19 @@ public class StudentService {
 		return dto;
 		
 	}
+	public StudentResponseDTO updateStudent(Long id, StudentRequestDTO dto) {
+
+	    Student student = repository.findById(id)
+	            .orElseThrow(() -> new StudentNotFoundException("Student not found"));
+
+	    student.setName(dto.getName());
+	    student.setEmail(dto.getEmail());
+	    student.setDepartment(dto.getDepartment());
+	    student.setYear(dto.getYear());
+	    student.setCgpa(dto.getCgpa());
+
+	    Student updated = repository.save(student);
+
+	    return mapToResponseDTO(updated);
+	}
 }
